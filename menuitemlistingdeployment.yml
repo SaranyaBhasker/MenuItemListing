@@ -1,21 +1,21 @@
 ﻿apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: MenuItemListing-deployment
+  name: menuitemlistingdeployment
   labels:
-    app: MenuItemListing
+    app: menuitemlisting
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: MenuItemListing  
+      app: menuitemlisting
   template:
     metadata:
       labels:
-        app: MenuItemListing
+        app: menuitemlisting
     spec:
       containers:
-      - name: MenuItemListing
+      - name: menuitemlisting
         image: menuitemlisting.azurecr.io/menuitemlistrepo:latest
         ports:
         - containerPort: 8080
@@ -31,4 +31,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: MenuItemListing
+    app: menuitemlisting
